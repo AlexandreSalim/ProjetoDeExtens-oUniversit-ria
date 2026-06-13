@@ -1,0 +1,177 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title>Cidadania Sustentável</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="page">
+<div class="hero">
+
+  <ion-badge color="success">
+    Projeto de Extensão Universitária
+  </ion-badge>
+
+  <h1>
+    Cidadania Sustentável
+  </h1>
+
+  <p>
+    Aplicação educativa desenvolvida para conscientizar a população sobre
+    reciclagem, economia de água, consumo consciente e preservação ambiental.
+  </p>
+
+</div>
+
+  <div class="stats">
+
+  <div class="stat-card">
+    <h3>♻️</h3>
+    <span>Reciclagem</span>
+  </div>
+
+  <div class="stat-card">
+    <h3>💧</h3>
+    <span>Economia de Água</span>
+  </div>
+
+  <div class="stat-card">
+    <h3>💡</h3>
+    <span>Energia Consciente</span>
+  </div>
+
+</div>
+
+  <div class="section">
+    <h2>O que este site mostra</h2>
+
+    <div class="cards">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>♻️ Reciclagem</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Separe corretamente os resíduos recicláveis e ajude a reduzir o impacto ambiental.
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>💧 Economia de Água</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Pequenas atitudes no banho, na pia e em casa ajudam a evitar desperdício.
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>💡 Economia de Energia</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Desligar aparelhos e aproveitar a luz natural reduz o consumo de energia.
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Como usar</h2>
+
+    <ion-card>
+      <ion-card-content>
+        <ol class="steps">
+          <li>Leia as dicas de sustentabilidade.</li>
+          <li>Responda ao quiz simples abaixo.</li>
+          <li>Veja seu resultado e compartilhe com outras pessoas.</li>
+        </ol>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div class="section quiz">
+    <h2>Teste seus hábitos sustentáveis</h2>
+
+    <ion-card>
+      <ion-card-content>
+        <ion-item lines="none">
+          <ion-label>Você separa lixo reciclável?</ion-label>
+          <ion-checkbox slot="end" [(ngModel)]="q1"></ion-checkbox>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-label>Você apaga as luzes ao sair de um ambiente?</ion-label>
+          <ion-checkbox slot="end" [(ngModel)]="q2"></ion-checkbox>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-label>Você evita desperdício de água?</ion-label>
+          <ion-checkbox slot="end" [(ngModel)]="q3"></ion-checkbox>
+        </ion-item>
+
+        <div class="actions">
+          <ion-button expand="block" color="success" (click)="calcularResultado()">
+            Ver resultado
+          </ion-button>
+
+          <ion-button expand="block" fill="outline" color="medium" (click)="limparResultado()">
+            Limpar
+          </ion-button>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div class="section" *ngIf="mensagem">
+    <ion-card class="resultado-card">
+      <ion-card-header>
+        <ion-card-title>Seu resultado</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p class="resultado">{{ mensagem }}</p>
+        <ion-text color="medium">
+          <p>{{ subtitulo }}</p>
+        </ion-text>
+        <p class="pontos">Pontos marcados: {{ pontos }}/3</p>
+      </ion-card-content>
+    </ion-card>
+
+    <div class="compromisso">
+
+  <ion-card>
+
+    <ion-card-header>
+      <ion-card-title>
+        Meu Compromisso Sustentável
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <p>
+        Eu me comprometo a reduzir desperdícios,
+        economizar água e energia e incentivar
+        práticas sustentáveis em minha comunidade.
+      </p>
+
+    </ion-card-content>
+
+  </ion-card>
+
+</div>
+
+  </div>
+
+<div class="footer">
+
+  <h4>Projeto de Extensão Universitária</h4>
+
+  <p>
+    Cidadania Sustentável: Práticas Acadêmicas em Prol da Comunidade
+  </p>
+
+  <p>
+    Desenvolvido com Angular + Ionic
+  </p>
+
+</div>
+</ion-content>
